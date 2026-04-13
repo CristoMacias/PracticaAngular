@@ -1,0 +1,41 @@
+<div class="contenedor-principal">
+
+  @if (progreso < 100) {
+    <section class="pantalla-carga">
+      <div class="card-carga">
+        <h1>Service Sent Events</h1>
+        <p class="subtitulo">Procesando información en tiempo real...</p>
+
+        <div class="info-progreso">
+          <p><strong>Progreso:</strong> {{ progreso }}%</p>
+          <p><strong>Mensaje:</strong> {{ mensaje }}</p>
+        </div>
+
+        <div class="barra-contenedor">
+          <div class="barra-progreso" [style.width.%]="progreso"></div>
+        </div>
+
+        <h3>Histórico</h3>
+
+        <ul class="historico">
+          @for (evento of eventos(); track $index) {
+            <li>
+              <span class="evento-progreso">{{ evento.progreso }}%</span>
+              <span class="evento-mensaje">{{ evento.mensaje }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    </section>
+  } @else {
+    <section class="pantalla-final">
+      <div class="card-final">
+        <div class="icono-check">✓</div>
+        <h1>Proceso completado</h1>
+        <p>La carga ha finalizado correctamente.</p>
+        <p class="mensaje-final">{{ mensaje }}</p>
+      </div>
+    </section>
+  }
+
+</div>

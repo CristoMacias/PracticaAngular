@@ -1,0 +1,114 @@
+<app-spinner></app-spinner>
+<div class="page">
+    <app-nav-bar></app-nav-bar>
+    <div class="detail-container">
+        @if (user){
+        <div class="detail-card">
+
+            <div class="detail-header">
+                <h1>{{ "DETAILTITLE" | translate}}</h1>
+                <p>{{"DESCDETAIL" | translate}}</p>
+            </div>
+
+            <div class="detail-section">
+                <h2>Información personal</h2>
+
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="label">ID</span>
+                        <span class="value">{{ user.id }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label">{{ "NAME" | translate}}</span>
+                        <span class="value">{{ user.name }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label">{{ "USERNAME" | translate}}</span>
+                        <span class="value">{{ user.username }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label">{{ "EMAILUSER" | translate}}</span>
+                        <span class="value">{{ user.email }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label">{{ "PHONEUSER" | translate}}</span>
+                        <span class="value">{{ user.phone }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label">{{ "WEBSITE" | translate}}</span>
+                        <span class="value">{{ user.website }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-section">
+                <h2>Compañía</h2>
+
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="label">{{ "COMPANYNAME" | translate}}</span>
+                        <span class="value">{{ user.company?.name }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label">{{ "CATCHPRASE" | translate}}</span>
+                        <span class="value">{{ user.company?.catchPhrase }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-section">
+                <h2>Dirección</h2>
+
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="label">{{ "STREET" | translate}}</span>
+                        <span class="value">{{ user.address?.street }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label">{{ "SUITE" | translate}}</span>
+                        <span class="value">{{ user.address?.suite }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label">{{ "CITY" | translate}}</span>
+                        <span class="value">{{ user.address?.city }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label">{{ "ZIPCODE" | translate}}</span>
+                        <span class="value">{{ user.address?.zipcode }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-section">
+                <h2>Geolocalización</h2>
+
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="label">{{" LAT " | translate}}</span>
+                        <span class="value">{{ user.address.geo.lat }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label">{{" LONG " | translate}}</span>
+                        <span class="value">{{ user.address.geo.lng }}</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        } @else {
+        <div>
+            <p>{{ "CHARGINGUSERS" | translate}}</p>
+        </div>       
+            }
+    </div>
+</div>

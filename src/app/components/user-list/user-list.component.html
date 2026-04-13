@@ -1,0 +1,31 @@
+<div class="filters">
+    <input class="campoTexto" type="text" [placeholder]="'NAMEFILTER' | translate" [value]="nameFilter()" (input)="nameFilter.set($any($event.target).value)"/>
+    <select class= "selectCiudades" [value]="cityFilter()" (change)="cityFilter.set($any($event.target).value)">
+        <option value="">{{ "ALLCITIES" | translate}}</option>
+        @for (city of cities(); track city){
+            <option [value]="city">{{ city }}</option>
+        }
+    </select>
+    <button class="botonReset" type="button" (click)="resetFilters()">{{ "RESETFILTERS" | translate}}</button>
+</div>
+
+<table class="tablaDatos">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>{{ "NAME" | translate}}</th>
+            <th>{{ "EMAILUSER" | translate}}</th>
+            <th>{{ "PHONEUSER"  | translate}}</th>
+        </tr>
+    </thead>
+    <tbody class="datos">
+        @for (user of filteredUsers(); track user.id){
+        <tr class="fila" (click)="goToUser(user.id)">
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone }}</td>
+        </tr>
+        }
+    </tbody>
+</table>

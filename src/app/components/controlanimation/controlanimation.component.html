@@ -1,0 +1,16 @@
+<div class="animation-container">
+  <h2>Control manual del timeline</h2>
+  <p class="subtitle">
+    Usa los botones para iniciar, pausar o reproducir la animación al revés o mueve el raton sobre el área de animación.
+  </p>
+
+  <div class="stage" #stage (mousemove)="moverConRaton($event)" (mouseleave)="resetRaton()" >
+    <div class="box" #box></div>
+  </div>
+
+  <div class="controls">
+    <button type="button" (click)="play()">Avanzar</button>
+    <button type="button" (click)="pause()">Pause</button>
+    <button type="button" (click)="reverse()">Volver</button>
+  </div>
+</div>

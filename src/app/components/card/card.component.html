@@ -1,0 +1,11 @@
+<div class="tarjetas">
+  @for (card of cards; track card.texto) {
+    <mat-card class="card">
+      <img mat-card-image [src]="card.imageUrl" alt="Imagen de la tarjeta">
+
+      <mat-card-content>
+        <p>{{ card.texto | translate }}</p>
+      </mat-card-content>
+    </mat-card>
+  }
+</div>

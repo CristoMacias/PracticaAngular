@@ -1,0 +1,15 @@
+{
+    "users": [
+        {"id": 1, "name": "Cristo", "password": "1231"},
+        {"id": 2, "name": "Sandra", "password": "1234"},
+        {"id": 3, "name": "Evelia", "password": "1321"}
+    ],
+    "admin": [
+        {"id": 1, "name": "Admin", "password": "admin"}
+    ],
+    "productos": [
+        {"id": 1, "name": "Producto 1", "description": "Descripción del producto 1", "price": 10.99},
+        {"id": 2, "name": "Producto 2", "description": "Descripción del producto 2", "price": 19.99},
+        {"id": 3, "name": "Producto 3", "description": "Descripción del producto 3", "price": 5.49}
+    ]
+}

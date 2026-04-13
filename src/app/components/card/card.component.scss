@@ -1,0 +1,28 @@
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  width: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card img {
+  height: 140px;
+  object-fit: cover;
+}
+
+mat-card-content {
+  padding: 16px;
+}
+
+mat-card-content p {
+  margin: 0;
+  font-size: 18px;
+}

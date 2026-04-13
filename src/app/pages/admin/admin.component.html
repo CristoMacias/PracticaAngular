@@ -1,0 +1,55 @@
+<app-spinner></app-spinner>
+<app-nav-bar></app-nav-bar>
+<div class="admin-page">
+  <div class="admin-container">
+    <div class="admin-header">
+      <h1>Panel de administración</h1>
+      <p>Bienvenido a la página de administración: <span>{{ nombre | titlecase }}</span></p>
+    </div>
+
+    <div class="admin-info">
+      <div class="info-card">
+        <p><strong>Día y hora actual:</strong> {{ horaActual | date:'medium' }}</p>
+        <p><strong>Hora actual:</strong> {{ horaActual | date:'shortTime' }}</p>
+        <p><strong>Fecha actual:</strong> {{ horaActual | date:'fullDate' }}</p>
+        <p><strong>Hora actualizada:</strong> {{ horaActual | date:'HH:mm:ss' }}</p>
+      </div>
+
+      <div class="info-card resumen-card">
+        <p><strong>Productos actuales:</strong> {{ productosActuales$ | async }}</p>
+        <p><strong>Objetivo de productos:</strong> {{ objetivoProductos }}</p>
+        <p><strong>Progreso:</strong> {{ progreso$ | async | percent:'1.0-0' }}</p>
+        <p><strong>Clave secreta:</strong> ****************{{ claveSecreta | slice:-15 }}</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Productos</h2>
+
+    <div class="productos-grid">
+      @for (producto of ((productos | async) ?? []); track producto.id) {
+        <div class="producto-card" (click)="marcarProducto(producto.id)">
+          <h3>{{ producto.name | uppercase }}</h3>
+          <p class="descripcion">{{ producto.description | lowercase }}</p>
+          <p class="precio">{{ producto.price | currency:'EUR' }}</p>
+
+          @if (productoAbierto === producto.id){
+            <pre class="json-view">
+                {{ producto | json }}
+            </pre>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</div>
+
+<app-animation-control></app-animation-control>
+
+<section class="scroll-section">
+      <p class="scroll-text">Este bloque se animará cuando entre en pantalla.</p>
+
+      <div class="scroll-box" #scrollBox>
+        Animación con ScrollTrigger
+      </div>
+    </section>
+

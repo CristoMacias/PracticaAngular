@@ -1,0 +1,43 @@
+<div class="page">
+  <app-nav-bar></app-nav-bar>
+
+  <div class="contenido-principal">
+    <app-title class="titulo"></app-title>
+
+    @if (usuario != '') {
+      <h1>{{ usuario | saludo }}</h1>
+    }
+
+    <div class="tarjetas">
+      <Card></Card>
+    </div>
+
+    <div class="pipes-panel">
+      <button class="pipes-toggle" (click)="mostrarPipes = !mostrarPipes">
+        <span>Pipes utilizados</span>
+        <span class="flecha" [class.abierta]="mostrarPipes">⌄</span>
+      </button>
+
+      @if (mostrarPipes) {
+        <div class="pipes-content">
+          <div class="pipe-item">
+            <h3>Pipe doble</h3>
+            <p>El doble de nuestras visitas es <strong>{{ visitas | doble }}</strong></p>
+          </div>
+
+          <div class="pipe-item">
+            <h3>Pipe resaltar</h3>
+            <p [innerHTML]="texto | resaltar"></p>
+          </div>
+
+          <div class="pipe-item">
+            <h3>Pipe edad</h3>
+            <p>La edad de una persona nacida en 1996 es: <strong>{{ fecha_nacimiento | edad }}</strong></p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

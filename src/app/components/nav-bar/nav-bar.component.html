@@ -1,0 +1,31 @@
+<nav class="navbar">
+  <div class="nav-links">
+    <a routerLink="">{{ "HOME" | translate }}</a>
+    <a routerLink="/about">{{ "ABOUT" | translate }}</a>
+    <a routerLink="/contact">{{ "CONTACT" | translate }}</a>
+    <a routerLink="/admin">{{ "ADMIN" | translate }}</a>
+    <a routerLink="/sse">{{ "SSE" | translate }}</a>
+    <a routerLink="/ws">{{ "WS" | translate }}</a>
+  </div>
+
+  <div class="nav-right">
+    <div class="language-box">
+      <span class="flag">{{ idioma === 'es' ? '🇪🇸' : '🇬🇧' }}</span>
+
+      <select class="language-select" [value]="idioma" (change)="cambiarIdioma($event)">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+
+    @if (!estaLogeado) {
+      <div class="login-box">
+        <a routerLink="/login" class="login-link">{{ "LOGIN" | translate }}</a>
+      </div>
+    } @else {
+      <button mat-button class="logout-btn" (click)="cerrarSesion()">
+        {{ "LOGOUT" | translate }}
+      </button>
+    }
+  </div>
+</nav>

@@ -1,0 +1,148 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f4f5fb;
+}
+
+.contenido-principal {
+  flex: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.titulo {
+  padding-top: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #4f46c7;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.tarjetas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+/* PANEL DESPLEGABLE */
+.pipes-panel {
+  max-width: 1000px;
+  margin: 1rem auto 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8f5;
+  overflow: hidden;
+}
+
+.pipes-toggle {
+  width: 100%;
+  background: linear-gradient(135deg, #6f6be8, #5c57d8);
+  color: white;
+  border: none;
+  padding: 18px 24px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.pipes-toggle:hover {
+  filter: brightness(1.05);
+}
+
+.flecha {
+  font-size: 1.4rem;
+  transition: transform 0.25s ease;
+}
+
+.flecha.abierta {
+  transform: rotate(180deg);
+}
+
+.pipes-content {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: desplegarPipes 0.25s ease;
+}
+
+.pipe-item {
+  background: #f8f8ff;
+  border: 1px solid #ececf6;
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.pipe-item h3 {
+  margin: 0 0 10px;
+  color: #4f46c7;
+  font-size: 1.05rem;
+}
+
+.pipe-item p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.pipe-item strong {
+  color: #1f1f1f;
+}
+
+@keyframes desplegarPipes {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .contenido-principal {
+    padding: 0 14px 30px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    padding: 0 10px;
+  }
+
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .pipes-toggle {
+    padding: 16px 18px;
+    font-size: 1rem;
+  }
+
+  .pipes-content {
+    padding: 16px;
+  }
+
+  .pipe-item {
+    padding: 16px;
+  }
+}
