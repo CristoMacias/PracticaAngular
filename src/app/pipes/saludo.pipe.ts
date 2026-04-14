@@ -1,13 +1,17 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { inject, Pipe, PipeTransform } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Pipe({
   name: 'saludo',
-  standalone: true
+  standalone: true,
+  pure: false
 })
 export class SaludoPipe implements PipeTransform {
 
+  private translate = inject(TranslateService);
+
   transform(nombre: string): string {
-    return `¡Hola, ${nombre}!`;
+    return this.translate.instant('SALUDO', { usuario: nombre });
   }
 
 }

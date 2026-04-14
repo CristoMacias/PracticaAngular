@@ -8,6 +8,7 @@
         "TEXTO2": "Holiday adventures",
         "TEXTO3": "Nature routes"
     },
+    "SALUDO": "Hello {{ usuario }}",
     "INFOFOOTER": "Research on Angular",
     "INFOCONTACT": "INFORMATION",
     "USER": "Users",
@@ -47,5 +48,12 @@
     "MESSAGEERROR": "Invalid form",
     "LOGIN": "Login",
     "LOGOUT": "Logout",
-    "ADMIN": "Admin"
+    "ADMIN": "Admin",
+    "USEDPIPES": "Used Pipes",
+    "DOUBLEPIPES": "Double Pipe",
+    "HIGHLIGHTPIPES": "Highlight Pipes",
+    "AGEPIPES": "Age Pipe",
+    "DOUBLEDESCRIPTION": "Twice our visits is",
+    "HIGHLIGHTTEXT": "Welcome to our homepage. Here you will find all the information you need about our products and services. Explore and enjoy your visit!",
+    "AGEDESCRIPTION": "The age is: "
 }

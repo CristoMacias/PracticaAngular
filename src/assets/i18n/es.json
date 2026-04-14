@@ -47,6 +47,14 @@
     "MESSAGEERROR": "Formulario incorrecto",
     "LOGIN": "Iniciar sesión",
     "LOGOUT": "Cerrar sesión",
-    "ADMIN": "Administrador"
+    "ADMIN": "Administrador",
+    "USEDPIPES": "Pipes utilizados",
+    "DOUBLEPIPES": "Pipe doble",
+    "HIGHLIGHTPIPES": "Pipes resaltar",
+    "AGEPIPES": "Pipe edad",
+    "DOUBLEDESCRIPTION": "El doble de nuestras visitas es",
+    "HIGHLIGHTTEXT": "Bienvenido a nuestra página de inicio. Aquí encontrarás toda la información que necesitas sobre nuestros productos y servicios. ¡Explora y disfruta de tu visita!",
+    "AGEDESCRIPTION": "La edad es: ",
+    "SALUDO": "Hola {{ usuario }}"
     
 }

@@ -10,7 +10,12 @@
 
   <div class="nav-right">
     <div class="language-box">
-      <span class="flag">{{ idioma === 'es' ? '🇪🇸' : '🇬🇧' }}</span>
+      @if (idioma === 'es') {
+      <img src="../../../assets/i18n/images/Bandera_nacional_de_España.png" alt="Bandera de España" class="bandera">
+      }
+      @else {
+      <img src="../../../assets/i18n/images/png-clipart-flag-of-england-flag-of-the-united-kingdom-flag-of-the-city-of-london-england-angle-english.png" alt="Bandera de España" class="bandera">
+      }
 
       <select class="language-select" [value]="idioma" (change)="cambiarIdioma($event)">
         <option value="es">Español</option>

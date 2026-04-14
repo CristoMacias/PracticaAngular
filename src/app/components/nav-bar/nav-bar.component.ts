@@ -49,7 +49,7 @@ export class NavBarComponent {
   }
 
   get estaLogeado(): boolean {
-    return this.sessionService.estaLogeado;
+    return this.sessionService.isLoggedIn();
   }
 
   cerrarSesion(){

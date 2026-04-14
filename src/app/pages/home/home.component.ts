@@ -21,7 +21,7 @@ export class HomeComponent {
   nombre = "Cristo";
   usuario = localStorage.getItem('usuario') || '';
   visitas = 240;
-  texto = "Bienvenido a nuestra página de inicio. Aquí encontrarás toda la información que necesitas sobre nuestros productos y servicios. ¡Explora y disfruta de tu visita!";
+  texto = "HIGHLIGHTTEXT";
   fecha_nacimiento: Date = new Date(1996, 0, 1);
   mostrarPipes = false;
 }

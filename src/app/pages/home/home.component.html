@@ -14,25 +14,25 @@
 
     <div class="pipes-panel">
       <button class="pipes-toggle" (click)="mostrarPipes = !mostrarPipes">
-        <span>Pipes utilizados</span>
+        <span>{{ "USEDPIPES" | translate }}</span>
         <span class="flecha" [class.abierta]="mostrarPipes">⌄</span>
       </button>
 
       @if (mostrarPipes) {
         <div class="pipes-content">
           <div class="pipe-item">
-            <h3>Pipe doble</h3>
-            <p>El doble de nuestras visitas es <strong>{{ visitas | doble }}</strong></p>
+            <h3>{{ "DOUBLEPIPES" | translate }}</h3>
+            <p> {{ "DOUBLEDESCRIPTION" | translate }} <strong>{{ visitas | doble }}</strong></p>
           </div>
 
           <div class="pipe-item">
-            <h3>Pipe resaltar</h3>
-            <p [innerHTML]="texto | resaltar"></p>
+            <h3>{{ "HIGHLIGHTPIPES" | translate }}</h3>
+            <p [innerHTML]="(texto | translate) | resaltar"></p>
           </div>
 
           <div class="pipe-item">
-            <h3>Pipe edad</h3>
-            <p>La edad de una persona nacida en 1996 es: <strong>{{ fecha_nacimiento | edad }}</strong></p>
+            <h3>{{ "AGEPIPES" | translate }}</h3>
+            <p> {{ "AGEDESCRIPTION" | translate }} <strong>{{ fecha_nacimiento | edad }}</strong></p>
           </div>
         </div>
       }
