@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NavBarComponent } from '../../components/nav-bar/nav-bar.component';
 import { gsap } from 'gsap';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,8 @@ import { gsap } from 'gsap';
     MatButtonModule,
     MatIconModule,
     FormsModule,
-    NavBarComponent
+    NavBarComponent,
+    TranslateModule
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'

@@ -55,5 +55,12 @@
     "AGEPIPES": "Age Pipe",
     "DOUBLEDESCRIPTION": "Twice our visits is",
     "HIGHLIGHTTEXT": "Welcome to our homepage. Here you will find all the information you need about our products and services. Explore and enjoy your visit!",
-    "AGEDESCRIPTION": "The age is: "
+    "AGEDESCRIPTION": "The age is: ",
+    "ACCESSTOCONTINUE": "Access your account to continue",
+    "PASSWORD": "Password",
+    "REMEMBERME": "Remember me",
+    "FORGOTPASSWORD": "Forgot your password?",
+    "ACCESS": "Log in",
+    "ASKACCOUNT": "Don't have an account?",
+    "REGISTER": "Sign up"
 }

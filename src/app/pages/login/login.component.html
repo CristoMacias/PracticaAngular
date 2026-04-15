@@ -6,9 +6,9 @@
 
       <mat-card-header>
         <div class="login-title-block">
-          <mat-card-title class="login-title">Iniciar sesión</mat-card-title>
+          <mat-card-title class="login-title">{{ 'LOGIN' | translate }}</mat-card-title>
           <mat-card-subtitle>
-            Accede a tu cuenta para continuar
+            {{ 'ACCESSTOCONTINUE' | translate }}
           </mat-card-subtitle>
         </div>
       </mat-card-header>
@@ -17,32 +17,32 @@
         <form class="login-form" (ngSubmit)="login()">
           <div class="login-field">
             <mat-form-field appearance="outline" class="full-width">
-              <mat-label>Nombre de usuario</mat-label>
-              <input matInput type="usuario" placeholder="Nombre de usuario" [(ngModel)]="usuario" name="usuario" />
+              <mat-label>{{'USERNAME' | translate}}</mat-label>
+              <input matInput type="usuario" placeholder="{{ 'USERNAME' | translate }}" [(ngModel)]="usuario" name="usuario" />
               <mat-icon matSuffix>email</mat-icon>
             </mat-form-field>
           </div>
           <div class="login-field">
             <mat-form-field appearance="outline" class="full-width">
-              <mat-label>Contraseña</mat-label>
-              <input matInput type="password" placeholder="Introduce tu contraseña" [(ngModel)]="password"
+              <mat-label>{{'PASSWORD' | translate}}</mat-label>
+              <input matInput type="password" placeholder="{{ 'PASSWORD' | translate }}" [(ngModel)]="password"
                 name="password" />
               <mat-icon matSuffix>lock</mat-icon>
             </mat-form-field>
           </div>
           <div class="login-button-wrap">
             <div class="login-options">
-              <mat-checkbox [(ngModel)]="rememberMe" name="rememberMe">Recordarme</mat-checkbox>
-              <a href="#" class="forgot-link">¿Has olvidado tu contraseña?</a>
+              <mat-checkbox [(ngModel)]="rememberMe" name="rememberMe">{{ 'REMEMBERME' | translate }}</mat-checkbox>
+              <a href="#" class="forgot-link">{{ 'FORGOTPASSWORD' | translate }}</a>
             </div>
-            <button mat-raised-button class="login-button" type="submit">Entrar</button>
+            <button mat-raised-button class="login-button" type="submit">{{ 'ACCESS' | translate }}</button>
           </div>
         </form>
       </mat-card-content>
       <div class="crear-cuenta">
         <mat-card-actions class="register-box">
-          <span>¿No tienes cuenta?</span>
-          <a href="#">Crear cuenta</a>
+          <span>{{ 'ASKACCOUNT' | translate }}</span>
+          <a href="#">{{ 'REGISTER' | translate }}</a>
         </mat-card-actions>
       </div>
     </mat-card>
